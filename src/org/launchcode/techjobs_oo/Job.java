@@ -37,34 +37,34 @@ public String toString(){
                 "Name:" + name +
                 "\n" +
                 "Employer: " + employer +
-                "\n");
-//                "Location: " + location +
-//                "\n" +
-//                "Position Type: " + positionType +
-//                "\n" +
-//                "Core Competency: " + coreCompetency);
+                "\n" +
+                "Location: " + location +
+                "\n" +
+                "Position Type: " + positionType +
+                "\n" +
+                "Core Competency: " + coreCompetency);
 
 }
 
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
-   // @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (!(o instanceof Job)) return false;
-//        Job job = (Job) o;
-//        return getId() == job.getId();
-//    }
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Job)) return false;
         Job job = (Job) o;
         return getId() == job.getId();
     }
+
+
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Job job = (Job) o;
+//        return getId() == job.getId();
+//    }
 
     @Override
     public int hashCode() {
@@ -88,8 +88,8 @@ public String toString(){
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String aName) {
+        this.name = aName;
     }
 
     public Employer getEmployer() {
